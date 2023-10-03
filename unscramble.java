@@ -11,19 +11,18 @@ public class unscramble {
         System.out.println(getAnswer(parsedWordList, parsedInputWordList));
     }
 
-    public static List<String> parseWordList(String adress){
+    public static List<String> parseWordList(String adress) {
         List<String> words = new ArrayList<String>();
-        try  
-            {  
-        File file=new File(adress);   
-        Scanner sc = new Scanner(file);      
-        while (sc.hasNextLine())  {
-            words.add((sc.nextLine()));
-        }         
+        try {  
+            File file=new File(adress);   
+            Scanner sc = new Scanner(file);      
+            while (sc.hasNextLine())  {
+                words.add((sc.nextLine()));
+            }         
         
-            } catch(Exception e) {
-                System.out.println("Oops" + e.getMessage());
-            }
+        } catch(Exception e) {
+            System.out.println("Oops" + e.getMessage());
+        }
         return (words);
             
     }
@@ -47,6 +46,7 @@ public class unscramble {
 
         return sortedStrings;
     }
+
     public static String sortStringByASCII(String input) {
         char[] charArray = input.toCharArray();
         for (int i = 0; i < charArray.length - 1; i++) {
